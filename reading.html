@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my Personal Website</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #f9f9f9; 
+            background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        header { background: #3e4a61cc; color: #fff; padding: 2rem 1rem; text-align: center; }
+        main {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fffbeed9;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            font-size: 1.5rem;
+            line-height: 2.2rem;
+            color: #2a3556;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+        }
+        nav a { color:#fff; background:#3e4a61; padding:0.5rem 1rem; border-radius:5px; text-decoration:none; font-weight:bold; }
+        p {
+            font-size: 1.5rem;
+            line-height: 2.2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reading</h1>
+    </header>
+    <main>
+        <p>One of my hobbies is reading. During my free time I love to relax with a good book. Some of my favorite authors are Rick Riordan, Lauren Roberts, and Holly Jackson. I enjoy a wide range of genres: fantasy, romance, murder mystery/thriller, historical fiction, and fiction.</p>
+        <div id="book-quote" style="margin:2rem 0; font-size:1.3rem; font-style:italic; color:#4b3e2e;"></div>
+        <button onclick="showRandomQuote()" style="padding:0.7rem 1.5rem; font-size:1.1rem; background:#3e4a61; color:#fff; border:none; border-radius:6px; cursor:pointer; margin-bottom:1.5rem;">Show a Random Book Quote</button>
+        <script>
+            const quotes = [
+                '"Not all those who wander are lost." – J.R.R. Tolkien, The Lord of the Rings',
+                '"It does not do to dwell on dreams and forget to live." – J.K. Rowling, Harry Potter and the Sorcerer\'s Stone',
+                '"To the well-organized mind, death is but the next great adventure." – J.K. Rowling, Harry Potter and the Sorcerer\'s Stone',
+                '"The only way out of the labyrinth of suffering is to forgive." – John Green, Looking for Alaska',
+                '"Whatever our souls are made of, his and mine are the same." – Emily Brontë, Wuthering Heights',
+                '"It is only with the heart that one can see rightly; what is essential is invisible to the eye." – Antoine de Saint-Exupéry, The Little Prince',
+                '"You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose." – Dr. Seuss, Oh, the Places You\'ll Go!'
+            ];
+            function showRandomQuote() {
+                const quote = quotes[Math.floor(Math.random() * quotes.length)];
+                document.getElementById('book-quote').textContent = quote;
+            }
+        </script>
+    </main>
+    <footer style="text-align:center; margin:2rem 0;">
+        <a href="index.html" style="color:#fff; background:#3e4a61; padding:0.5rem 1rem; border-radius:5px; text-decoration:none; font-weight:bold;">Home</a>
+    </footer>
+</body>
+</html>

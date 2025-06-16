@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #f9f9f9; 
+            background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        header { background: #3e4a61; color: #fff; padding: 2rem 1rem; text-align: center; }
+        main { max-width: 700px; margin: 2rem auto; padding: 2rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); text-align: center; font-size: 1.7rem; line-height: 2.3rem; }
+        h1 { font-size: 3.2rem; margin-bottom: 1.5rem; }
+        p { font-size: 1.7rem; line-height: 2.3rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dance</h1>
+    </header>
+    <main>
+        <p>I have been dancing for 11 years at a studio, 5 of those years competitively. I am also on the varsity dance team for my highschool. I have experience in ballet, jazz, tap, contemporary, and musical theater. My favorite genre of dance is jazz which I have done 5 solos in.</p>
+        <div id="dance-fact" style="margin:2rem 0; font-size:1.3rem; font-style:italic; color:#4b3e2e;"></div>
+        <button onclick="showRandomFact()" style="padding:0.7rem 1.5rem; font-size:1.1rem; background:#3e4a61; color:#fff; border:none; border-radius:6px; cursor:pointer; margin-bottom:1.5rem;">Show a Fun Dance Fact</button>
+        <script>
+            const facts = [
+                "The word 'ballet' comes from the Italian word 'ballare', which means 'to dance'.",
+                "Jazz dance originated from African American vernacular dance in the early 20th century.",
+                "Tap dancing uses metal plates on the shoes to create rhythmic sounds.",
+                "The longest conga dance line ever recorded was over 119,000 people!",
+                "The Nutcracker is one of the most famous ballets performed around the world.",
+                "Breakdancing will be an Olympic sport for the first time in 2024.",
+                "Some dancers can perform more than 30 fouetté turns in a row!"
+            ];
+            function showRandomFact() {
+                const fact = facts[Math.floor(Math.random() * facts.length)];
+                document.getElementById('dance-fact').textContent = fact;
+            }
+        </script>
+    </main>
+    <footer style="text-align:center; margin:2rem 0;">
+        <a href="index.html" style="color:#fff; background:#3e4a61; padding:0.5rem 1rem; border-radius:5px; text-decoration:none; font-weight:bold;">Home</a>
+    </footer>
+</body>
+</html>
